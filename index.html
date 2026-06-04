@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aswajith PR | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#7c3aed;
+    border-radius:50%;
+    filter:blur(180px);
+    top:-100px;
+    left:-100px;
+    opacity:0.4;
+    animation:float 8s ease-in-out infinite;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#06b6d4;
+    border-radius:50%;
+    filter:blur(180px);
+    bottom:-100px;
+    right:-100px;
+    opacity:0.4;
+    animation:float 10s ease-in-out infinite alternate;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(40px);
+    }
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+    position:relative;
+    z-index:1;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6,#ec4899);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        filter:drop-shadow(0 0 10px #8b5cf6);
+    }
+    to{
+        filter:drop-shadow(0 0 25px #38bdf8);
+    }
+}
+
+.hero h2{
+    margin-top:10px;
+    color:#cbd5e1;
+    font-weight:400;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:25px;
+    margin:20px 0;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(139,92,246,0.5);
+}
+
+.section-title{
+    color:#60a5fa;
+    margin-bottom:15px;
+    font-size:1.6rem;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:linear-gradient(90deg,#8b5cf6,#06b6d4);
+    padding:12px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#94a3b8;
+}
+
+.fade{
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <section class="hero fade">
+        <h1>Aswajith PR</h1>
+        <h2>BCA Student | Future IT Professional</h2>
+    </section>
+
+    <div class="card fade">
+        <h3 class="section-title">About Me</h3>
+        <p>
+            Hello! I am Aswajith PR, a 3rd-year Bachelor of Computer Applications (BCA)
+            student at Yuvakshethra Institute of Management Studies.
+            I am passionate about technology, learning new skills, and exploring the
+            world of software development. My hobby is listening to music, and I enjoy
+            improving my knowledge in the IT field.
+        </p>
+    </div>
+
+    <div class="card fade">
+        <h3 class="section-title">Personal Information</h3>
+        <div class="info-grid">
+            <p><strong>Age:</strong> 20</p>
+            <p><strong>Course:</strong> BCA</p>
+            <p><strong>Year:</strong> 3rd Year</p>
+            <p><strong>Location:</strong> Karimpuzha</p>
+        </div>
+    </div>
+
+    <div class="card fade">
+        <h3 class="section-title">Education</h3>
+        <p>
+            <strong>Yuvakshethra Institute of Management Studies</strong><br>
+            Bachelor of Computer Applications (BCA)<br>
+            Currently pursuing 3rd Year.
+        </p>
+    </div>
+
+    <div class="card fade">
+        <h3 class="section-title">Skills</h3>
+        <div class="info-grid">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Computer Applications</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Communication</div>
+            <div class="skill">Team Work</div>
+        </div>
+    </div>
+
+    <div class="card fade">
+        <h3 class="section-title">Hobbies</h3>
+        <p>🎵 Listening to Music</p>
+    </div>
+
+    <div class="card fade">
+        <h3 class="section-title">Contact</h3>
+        <p><strong>Email:</strong> aswajith548@gmail.com</p>
+        <p><strong>Phone:</strong> 7012529430</p>
+        <p><strong>Location:</strong> Karimpuzha</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Aswajith PR | Student Portfolio</p>
+    </div>
+
+</div>
+
+</body>
+</html>
