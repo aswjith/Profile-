@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aswajith P R | Portfolio</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#00ffff33;
+    border-radius:50%;
+    top:-200px;
+    left:-100px;
+    filter:blur(120px);
+    animation:move1 8s infinite alternate;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#ff00ff33;
+    border-radius:50%;
+    bottom:-200px;
+    right:-100px;
+    filter:blur(120px);
+    animation:move2 8s infinite alternate;
+    z-index:-1;
+}
+
+@keyframes move1{
+    from{transform:translateX(0);}
+    to{transform:translateX(150px);}
+}
+
+@keyframes move2{
+    from{transform:translateX(0);}
+    to{transform:translateX(-150px);}
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    padding:20px;
+}
+
+/* Avatar Circle */
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:4px solid #00ffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:80px;
+    font-weight:bold;
+    color:#00ffff;
+    background:#0f172a;
+    box-shadow:0 0 30px #00ffff;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 15px #00ffff;
+    }
+    to{
+        box-shadow:0 0 45px #00ffff;
+    }
+}
+
+h1{
+    font-size:3rem;
+    margin-top:25px;
+    color:#00ffff;
+}
+
+.subtitle{
+    color:#ccc;
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+.btn{
+    margin-top:30px;
+    display:inline-block;
+    padding:14px 35px;
+    border-radius:50px;
+    background:#00ffff;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.1rem;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px #00ffff;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.2rem;
+    color:#00ffff;
+    margin-bottom:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,255,255,0.15);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px #00ffff;
+}
+
+.about p{
+    text-align:center;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill{
+    text-align:center;
+    font-size:1.1rem;
+    font-weight:bold;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:1.1rem;
+}
+
+.contact a{
+    color:#00ffff;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#aaa;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.3rem;
+    }
+
+    .profile-img{
+        width:150px;
+        height:150px;
+        font-size:65px;
+    }
+
+    .subtitle{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="profile-img">A</div>
+
+    <h1>Aswajith P R</h1>
+
+    <p class="subtitle">
+        BCA Student | Future IT Professional
+    </p>
+
+    <a href="#about" class="btn">
+        Explore Profile
+    </a>
+
+</header>
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="card about">
+        <p>
+            Hello! I'm <b>Aswajith P R</b>, a 3rd-year BCA student passionate
+            about technology, innovation, and continuous learning. I enjoy
+            exploring new technologies, developing technical skills, and
+            working on projects that help me grow professionally. My goal is
+            to build a successful career in the IT industry and contribute to
+            impactful digital solutions.
+        </p>
+    </div>
+
+</section>
+
+<section id="education">
+
+    <h2 class="section-title">Education</h2>
+
+    <div class="card">
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <br>
+        <p><strong>Current Year:</strong> 3rd Year</p>
+        <p><strong>Age:</strong> 20</p>
+    </div>
+
+</section>
+
+<section id="skills">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills">
+        <div class="card skill">Python</div>
+        <div class="card skill">C Programming</div>
+        <div class="card skill">Data Analytics</div>
+        <div class="card skill">Microsoft Excel</div>
+        <div class="card skill">Problem Solving</div>
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="card contact">
+
+        <p>
+            📧 Email:
+            <a href="mailto:aswajith548@gmail.com">
+                aswajith548@gmail.com
+            </a>
+        </p>
+
+        <p>
+            📱 Phone:
+            <a href="tel:7012529430">
+                7012529430
+            </a>
+        </p>
+
+        <p>
+            🚀 Open to learning, networking, and new opportunities.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Aswajith P R | Portfolio Website
+</footer>
+
+</body>
+</html>
